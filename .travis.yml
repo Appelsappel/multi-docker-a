@@ -6,10 +6,10 @@ services:
 before_install:
   - docker build -t appelsappel/react-test -f ./client/Dockerfile.dev ./client
 
-script:
-  - docker run appelsappel/react-test npm test
+#script:
+#  - docker run appelsappel/react-test npm test
 
-after_success:
+script:
   - docker build -t appelsappel/multi-client ./client
   - docker build -t appelsappel/multi-nginx ./nginx
   - docker build -t appelsappel/multi-api ./api
