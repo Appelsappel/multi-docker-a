@@ -3,28 +3,28 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "appelsappel/multi-client",
+      "image": "appelsappel/multi-client-a",
       "hostname": "client",
       "essential": "false",
       "memory": 128
     },
     {
       "name": "api",
-      "image": "appelsappel/multi-api",
+      "image": "appelsappel/multi-api-a",
       "hostname": "api",
       "essential": "false",
       "memory": 128
     },
     {
       "name": "worker",
-      "image": "appelsappel/multi-worker",
+      "image": "appelsappel/multi-worker-a",
       "hostname": "worker",
       "essential": "false",
       "memory": 128
     },
     {
       "name": "nginx",
-      "image": "appelsappel/multi-nginx",
+      "image": "appelsappel/multi-nginx-a",
       "hostname": "nginx",
       "essential": "true",
       "portMappings": [
