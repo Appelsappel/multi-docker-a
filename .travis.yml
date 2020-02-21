@@ -10,17 +10,17 @@ before_install:
 #  - docker run appelsappel/react-test npm test
 
 script:
-  - docker build -t appelsappel/multi-client ./client
-  - docker build -t appelsappel/multi-nginx ./nginx
-  - docker build -t appelsappel/multi-api ./api
-  - docker build -t appelsappel/multi-worker ./worker
+  - docker build -t appelsappel/multi-client-a ./client
+  - docker build -t appelsappel/multi-nginx-a ./nginx
+  - docker build -t appelsappel/multi-api-a ./api
+  - docker build -t appelsappel/multi-worker-a ./worker
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-  - docker push appelsappel/multi-client
-  - docker push appelsappel/multi-nginx
-  - docker push appelsappel/multi-api
-  - docker push appelsappel/multi-worker
+  - docker push appelsappel/multi-client-a
+  - docker push appelsappel/multi-nginx-a
+  - docker push appelsappel/multi-api-a
+  - docker push appelsappel/multi-worker-a
 
 deploy:
   edge: true
