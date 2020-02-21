@@ -19,7 +19,7 @@ script:
 
   - docker push appelsappel/multi-client-a
   - docker push appelsappel/multi-nginx-a
-  - docker push appelsappel/multi-api-akk
+  - docker push appelsappel/multi-api-a
   - docker push appelsappel/multi-worker-a
 
 deploy:
