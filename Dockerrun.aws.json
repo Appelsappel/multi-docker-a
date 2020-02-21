@@ -1,0 +1,36 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "client",
+      "image": "appelsappel/multi-client",
+      "hostname": "client",
+      "essential": "false"
+    },
+    {
+      "name": "api",
+      "image": "appelsappel/multi-api",
+      "hostname": "api",
+      "essential": "false"
+    },
+    {
+      "name": "worker",
+      "image": "appelsappel/multi-worker",
+      "hostname": "worker",
+      "essential": "false"
+    },
+    {
+      "name": "nginx",
+      "image": "appelsappel/multi-nginx",
+      "hostname": "nginx",
+      "essential": "true",
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["client", "api"]
+    }
+  ]
+}
